@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  
+  
+body > div {
+    height: 50vh;
+    position:relative;
+}
+
+.red-part{
+    background-color: #FF3D00;
+    border-bottom: 5px solid #333333;
+    flex:1;
+    display: block;
+}
+
+.white-part{
+    flex:1;
+    display: flex;
+}
+
+.poke-logo{
+    display:block;
+    margin:auto;
+    width: 40%;
+}
+
+.pikachu-gif{
+    display:block;
+    margin:auto;
+    position: absolute;
+    bottom: 1%;
+    right: -4%;
+}
+
+.red-part .flex-sm-fill{
+    display:block;
+    color:white;
+    margin: 0 20%;
+
+}
+
+.btn{
+    display: block;
+    margin: auto;
+    padding: 4% 10%;
+
+}
