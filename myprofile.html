@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myprofile</title>
+    <link href="//db.onlinewebfonts.com/c/1888b71aa651100801cb2e473433f5ec?family=Nintendo+DS+BIOS" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -16,11 +17,20 @@
 </div>
 <div class="white-part-pages">
     <nav class="btn-group-vertical">
-        <button class="myprofile-btn" type="button" >GO PLAY!</button>
-        <button class="myprofile-btn" type="button" >POKEDEX</button>
-        <button class="myprofile-btn" type="button" >LOG OUT</button>
+        <a href="/game.html"><button class="nintendo-btn-red" type="button" >GO PLAY!</button></a>
+        <a href="/pokedex.html"><button class="nintendo-btn-dark" type="button" >POKEDEX</button></a>
+        <a href="/index.html"><button class="nintendo-btn-dark" type="button" >LOG OUT</button></a>
       </nav>
     </div>
+    <div class="pikachu-gif">
+        <iframe src="https://giphy.com/embed/q2wsGnr1MZjDa" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
 </div>
+<script src="scripts/apiConnection.js"></script>
+<script src="scripts/Login.js"></script>
+<script src="scripts/signup.js"></script>
+<script src="scripts/pokedex.js"></script>
+<script src="scripts/user.js"></script>
+<script src="scripts/validator.js"></script>
 </body>
 </html>
