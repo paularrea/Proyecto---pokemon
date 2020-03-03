@@ -7,7 +7,6 @@ let logInButton = document.getElementById("log-in-button");
 let form = document.getElementsByClassName("signup-form")[0];
 let formWrapper = document.getElementsByClassName("form-wrapper")[0];
 let signUpButton = document.getElementsByClassName("signup-button")[0];
-var currentUser
 let usersDB = JSON.parse(localStorage.getItem('users'))
 
 signUpButton.addEventListener("click",function(event){
@@ -66,6 +65,7 @@ function createUser (name, email, password) {
     }
     localStorage.setItem('users', JSON.stringify(usersDB));
 
-    currentUser = name
+    localStorage.setItem('currentUser', JSON.stringify(newUser))
+
     window.location.href = '../myprofile.html'
 } 

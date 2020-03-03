@@ -108,7 +108,10 @@ html body {
     text-align: center;
     margin:10px;
 }
-
+.welcome-user > article{
+    display:block;
+    margin-top:10px;
+}
 .white-part-pages > button{
     display: block;
     margin:auto;
@@ -190,6 +193,7 @@ form {
       columns:2;
       margin:auto;
       font-size: 100px;
+      
   }
   .whosthat-bs{
       font-size: 80px;
@@ -250,7 +254,7 @@ form {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 9999; /* Sit on top */
+    z-index: 999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;

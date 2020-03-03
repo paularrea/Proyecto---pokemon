@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myprofile</title>
-    <link href="//db.onlinewebfonts.com/c/1888b71aa651100801cb2e473433f5ec?family=Nintendo+DS+BIOS" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/1888b71aa651100801cb2e473433f5ec?family=Nintendo+DS+BIOS" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
 <body>
-<div class="red-part-pages">
-    <div class="contenedor-pages">
-    <img class="poke-logo-pages" src="/img/pokemon_logo.png"> 
-    <div><h1 class="whosthat-bs">WHO'S THAT<br>POKÉMON?</h1></div>
+    <div class="red-part-pages">
+        <div class="contenedor-pages">
+            <img class="poke-logo-pages" src="/img/pokemon_logo.png">
+            <div>
+                <h1 class="whosthat-bs">WHO'S THAT<br>POKÉMON?</h1>
+            </div>
+        </div>
     </div>
-</div>
-<div class="white-part-pages">
-    <nav class="btn-group-vertical">
-        <a href="/game.html"><button class="nintendo-btn-red" type="button" >GO PLAY!</button></a>
-        <a href="/pokedex.html"><button class="nintendo-btn-dark" type="button" >POKEDEX</button></a>
-        <a href="/index.html"><button class="nintendo-btn-dark" type="button" >LOG OUT</button></a>
-      </nav>
+    <div class="white-part-pages">
+        <div class="welcome-user">
+        </div>
+        <nav class="btn-group-vertical">
+            <a href="/game.html"><button class="nintendo-btn-red" type="button">GO PLAY!</button></a>
+            <a href="/pokedex.html"><button class="nintendo-btn-dark" type="button">POKEDEX</button></a>
+            <a href="/index.html"><button class="nintendo-btn-dark" type="button">LOG OUT</button></a>
+        </nav>
     </div>
     <div class="pikachu-gif">
-        <iframe src="https://giphy.com/embed/q2wsGnr1MZjDa" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <iframe src="https://giphy.com/embed/q2wsGnr1MZjDa" frameBorder="0" class="giphy-embed"
+            allowFullScreen></iframe>
     </div>
-</div>
-<script src="scripts/validator.js"></script>
+    </div>
+    <script src="scripts/validator.js"></script>
+    <script src="scripts/user.js"></script>
+    <script>
+        //console.log(JSON.parse(localStorage.getItem('currentUser')))
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'))
+        const welcomeWindow = document.querySelector(".welcome-user");
+        welcomeWindow.innerHTML = "";
+
+        const welcomeUser = document.createElement("article");
+        welcomeUser.innerHTML =
+            `<h2>Hello <strong>${currentUser.name}!<strong>  You are logged in!</h2>`;
+
+        welcomeWindow.appendChild(welcomeUser);
+    </script>
 </body>
+
 </html>

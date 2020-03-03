@@ -29,7 +29,7 @@ function deleteErrors (){
         
           if ((user.name === userName.value) && (user.password === password.value)){
               alert ('you are logged in!')
-              currentUser = user
+              localStorage.setItem('currentUser', JSON.stringify(user))
               window.location.href="../myprofile.html"
             }
     })
