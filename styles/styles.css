@@ -100,6 +100,7 @@ html body {
     width: 100%;
     text-align: center;
     margin:10px;
+   
 }
 .white-part-pages-game{
     display:block;
@@ -117,6 +118,7 @@ html body {
     margin:auto;
 
 }
+
 .white-part-pages > nav{
     margin-top: 3rem;
 }
@@ -138,7 +140,22 @@ html body {
     border-radius: 60px;
     background-color: white;
 }
-
+.play-goback{
+    margin: 0 60px;
+}
+.play-goback>a{
+    display: block;
+    margin:auto;
+}
+.login-btns{
+    margin-top: 10%;
+}
+.index-btns{
+    margin-top: 60px;
+}
+.indexbtn{
+    margin-bottom: 10px;
+}
 .retro-title{
     text-shadow: 2px 2px white, 3px 3px black;
 }
@@ -166,7 +183,7 @@ form {
     margin:5%
 }
 .whosthatpokemon{
-    width: 40%;
+    width: 50%;
 }
 
 .pikachu-gif{
@@ -271,7 +288,7 @@ form {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 100%;
   }
   
   /* The Close Button */
