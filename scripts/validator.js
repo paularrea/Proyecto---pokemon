@@ -6,15 +6,12 @@ class Validator {
         this.email = email;
         this.password = password;
     }
-
     checkUserName () {
         return this.userName ? true : false
     }
-
     checkEmail () {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(this.email) ? true : false
     }
-
     checkPassword () {
         if (!this.password){
             return false
@@ -24,14 +21,12 @@ class Validator {
             return true
         }
     }
-    
     errorCreator (message, location) {
         let div = document.createElement("div")
         div.setAttribute("class", "error")
         div.innerHTML = message
         form.insertBefore(div, location)
     }
-
     deleteErrors (){
         let errors = [...document.getElementsByClassName("error")]
         errors ? errors.forEach(error => error.remove()) : null;
@@ -48,12 +43,12 @@ class SignUpValidator extends Validator {
         let userExists = false;
 
         if (!usersDB){
-            return true;
+            return false;
         }
         else{
             usersDB.forEach(user => {
                 if (user.email === this.email){
-                    userExists=false
+                    userExists=true
                 }
             })
         }
@@ -70,8 +65,8 @@ class SignUpValidator extends Validator {
 }
 
 class LogInValidator extends Validator {
-    constructor (){
-        super();
+    constructor (userName,email,password){
+        super(userName,email,password);
     }
 
     checkEmailInDB (string){
@@ -80,10 +75,11 @@ class LogInValidator extends Validator {
         }
         else{
             userDB.forEach(user => {
-                if (user.email === string){return true}
+                if (user.userName === string){return true}
             })
         }
         return false
     }
 
 }
+

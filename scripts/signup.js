@@ -7,10 +7,10 @@ let logInButton = document.getElementById("log-in-button");
 let form = document.getElementsByClassName("signup-form")[0];
 let formWrapper = document.getElementsByClassName("form-wrapper")[0];
 let signUpButton = document.getElementsByClassName("signup-button")[0];
-
+var currentUser
 let usersDB = JSON.parse(localStorage.getItem('users'))
 
-signUpButton.addEventListener("click", function(event){
+signUpButton.addEventListener("click",function(event){
     event.preventDefault();
     deleteErrors();
     
@@ -18,6 +18,7 @@ signUpButton.addEventListener("click", function(event){
         console.log("user registered")
         createUser(userName.value, email.value, password.value)
     };
+   
 })
 
 function checkValidUser() {
@@ -27,26 +28,26 @@ function checkValidUser() {
     let validUser = true;
 
     if(!signUpValidator.checkUserName()){
-        signUpValidator.errorCreator("Por favor, introduce un nombre válido", userName)
+        signUpValidator.errorCreator("Please, introduce a valid name", userName)
         validUser=false
     }
     if(!signUpValidator.checkEmail()){
-        signUpValidator.errorCreator("Por favor, introduce una dirección de mail válida", email)
+        signUpValidator.errorCreator("Please, introduce a valid e-mail", email)
         validUser=false
     }
     if(!signUpValidator.checkPassword()){
-        signUpValidator.errorCreator("Por favor, introduce una contraseña válida", password)
+        signUpValidator.errorCreator("Please, introduce a valid password", password)
         validUser=false
     }
     if(!signUpValidator.checkRepeatPassword()){
-        signUpValidator.errorCreator("Las contraseñas no coinciden", repeatPassword)
+        signUpValidator.errorCreator("passwords does not match", repeatPassword)
         validUser=false
     }
-    if (!signUpValidator.checkEmailInDB(usersDB)){
-        signUpValidator.errorCreator("Este mail ya existe", email)
+    if (signUpValidator.checkEmailInDB(usersDB)){
+        signUpValidator.errorCreator("This e-mail already exist",email)
         validUser=false
     }
-        //escribir el resto de validaciones
+    
     return validUser
 }
 
@@ -57,11 +58,14 @@ function deleteErrors (){
 
 function createUser (name, email, password) {
     const newUser = new User(name, email, password)
-
+    console.log(newUser)
     if (usersDB){
         usersDB.push(newUser);
     } else {
         usersDB = [newUser]
     }
     localStorage.setItem('users', JSON.stringify(usersDB));
+
+    currentUser = name
+    window.location.href = '../myprofile.html'
 } 

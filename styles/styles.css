@@ -47,6 +47,7 @@ html body {
     text-align: center;
 }
 .whosthat-bs{
+    display:none;
     font-size: 80px;
     line-height: 70px;
     color:white;
@@ -144,6 +145,9 @@ form {
     padding: 0 10%;
     padding-top:2%;
 }
+.signup-goback-btn{
+    margin: 30px 0;
+}
 .poke-logo-pages{
     display:block;
     margin:auto;
@@ -217,6 +221,9 @@ form {
         width: 100%;
         columns:2;
         font-size: 30px;
+    }
+    .signup-goback-btn{
+        margin: 70px 0;
     }
     .whosthatpokemon{
         width: 50%;

@@ -1,36 +1,9 @@
 "use strict";
 let url = "https://pokeapi.co/api/v2/pokemon/";
 
-// const connectToApi = () => {
-//   const pokemonCard = document.querySelector('.pokemon-properties');
-//  for (let i = 1; i <= 151; i++) {
-//     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-//       .then(function (response) {
-//         return response.json();
-//       })
-//       .then(function (pokemon) {
-//         const article = document.createElement('article')
-//         article.innerHTML = `
-//           <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-//           <h2>${pokemon.name}</h2>
-//           <div>
-//              <p>height: ${(pokemon.height)*10} cm</p>
-//             <p>weight: ${(pokemon.weight)/10} kg</p>
-//             ${pokemon.types.map(pokemonType => `<p class="pokemon-type-label">Type: ${pokemonType.type.name}</p>`).join('')}
-//           </div>
-//         `
-//         pokemonCard.appendChild(article);
-//       })
-//       .catch(function (error) {
-//         return error;
-//       })
-//   }
-// }
-
-// connectToApi();
-
 let pokemonImg = document.getElementsByClassName("pokemon-img");
 
+//funcion que enlaza las imagenes externas (por id) con los datos de la pokeapi que quiero
 function getPokemonsbyId() {
   for (var i = 0; i < pokemonImg.length; i++) {
     pokemonImg[i].onclick = function(e) {
@@ -41,8 +14,9 @@ function getPokemonsbyId() {
 }
 getPokemonsbyId();
 
+
+//Datos de la api displayed en un modal
 function displayPokemon(id) {
-  //const pokemonCard = document.querySelector('.pokemon-properties');
 
   const pokemonCard = document.querySelector(".modal-content");
   pokemonCard.innerHTML = "";
