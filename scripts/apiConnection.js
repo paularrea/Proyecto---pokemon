@@ -7,7 +7,7 @@ let pokemonImg = document.getElementsByClassName("pokemon-img");
 function getPokemonsbyId() {
   for (var i = 0; i < pokemonImg.length; i++) {
     pokemonImg[i].onclick = function(e) {
-      console.log(this.id);
+      
       displayPokemon(this.id);
     };
   }
@@ -37,7 +37,10 @@ function displayPokemon(id) {
             ${pokemon.types.map(pokemonType =>`<p class="pokemon-type-label">Type: ${pokemonType.type.name}</p>`).join("")}
           </div>
         `;
+     
+      
       pokemonCard.appendChild(article);
+      pokemonCard.insertBefore(this.pokemonImg)
     })
     .catch(function(error) {
       return error;
