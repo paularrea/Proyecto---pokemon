@@ -97,9 +97,9 @@ html body {
 .white-part-pages{
     display:block;
     height: 79%;
-    width: 100%;
     text-align: center;
     margin:10px;
+    margin-top: 20px;
    
 }
 .white-part-pages-game{
@@ -141,7 +141,7 @@ html body {
     background-color: white;
 }
 .play-goback{
-    margin: 0 60px;
+    margin: 0 100px;
 }
 .play-goback>a{
     display: block;
@@ -165,6 +165,7 @@ form {
     padding: 0 10%;
     padding-top:2%;
 }
+
 .signup-goback-btn{
     margin: 30px 0;
 }
@@ -193,6 +194,7 @@ form {
     margin-top: 10%;
 }
 .pokemon-properties {
+    display: none;
     background-color: white;
     background-color: rgba(0, 0, 0, .2);
     border: 0 solid transparent;
@@ -201,13 +203,16 @@ form {
     max-width: 380px;
     padding: 3%;
 }
+.pokedexbtn{
+    font-size:20px;
+    padding: 5px 20px;
+}
 /* media query for the game page */
 @media (min-width: 730px) {
     
 
   .contenedor-pages{
-      display:inline;
-      columns:2;
+      display:block;
       margin:auto;
       font-size: 100px;
       
@@ -230,7 +235,7 @@ form {
       font-size: 70px;
   }
     .retro-title{
-        font-size: 40px;
+        font-size: 50px;
     }
     .nintendo-btn-red{
         font-size: 40px;
@@ -243,6 +248,7 @@ form {
         columns:2;
         font-size: 30px;
     }
+
     .signup-goback-btn{
         margin: 70px 0;
     }
@@ -303,5 +309,6 @@ form {
   .close:focus {
     color: #000;
     text-decoration: none;
-    cursor: pointer;
+  cursor: pointer;
   }
+

@@ -7,8 +7,12 @@ let pokemonImg = document.getElementsByClassName("pokemon-img");
 function getPokemonsbyId() {
   for (var i = 0; i < pokemonImg.length; i++) {
     pokemonImg[i].onclick = function(e) {
-      
       displayPokemon(this.id);
+      window.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+      });
     };
   }
 }
@@ -40,7 +44,7 @@ function displayPokemon(id) {
      
       
       pokemonCard.appendChild(article);
-      pokemonCard.insertBefore(this.pokemonImg)
+      //pokemonCard.insertBefore(this.pokemonImg)
     })
     .catch(function(error) {
       return error;
