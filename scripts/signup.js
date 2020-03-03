@@ -67,5 +67,5 @@ function createUser (name, email, password) {
 
     localStorage.setItem('currentUser', JSON.stringify(newUser))
 
-    window.location.href = '../myprofile.html'
+    window.location.href = 'myprofile.html'
 } 
