@@ -8,10 +8,10 @@ function getPokemonsbyId() {
   for (var i = 0; i < pokemonImg.length; i++) {
     pokemonImg[i].onclick = function(e) {
       displayPokemon(this.id);
-      window.scrollTo({
-        top: 100,
-        behavior: 'smooth'
-      });
+      // window.scrollTo({
+      //   top: 100,
+      //   behavior: 'smooth'
+      // });
     };
   }
 }

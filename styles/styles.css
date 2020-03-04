@@ -76,7 +76,6 @@ html body {
     flex:1;
     display: flex;
     margin:auto;
-    width: 100%;
     
 }
 .white-part button{
@@ -176,8 +175,15 @@ form {
     justify-content: center;
     padding: 0 10%;
     padding-top:2%;
+    text-align: justify;
+   
 }
-
+.form-control{
+    margin-bottom: 15px;
+}
+.etiqueta-form{
+    margin-bottom: -30px;
+}
 .signup-goback-btn{
     margin: 30px 0;
 }
@@ -211,8 +217,6 @@ form {
     background-color: rgba(0, 0, 0, .2);
     border: 0 solid transparent;
     border-radius: 10px;
-    margin: 3% auto;
-    max-width: 380px;
     padding: 3%;
 }
 .pokedexbtn{
@@ -223,6 +227,72 @@ form {
 .faqs-answer{
     font-size: 25px;
 }
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #fff;
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin:0 auto; 
+    letter-spacing: .05em; 
+    animation: 
+    typing 2.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.typewriter{
+text-align: justify;
+}
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
+
+
+
+
+
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  }
 /* media query */
 @media (min-width: 730px) {
     
@@ -291,16 +361,12 @@ form {
 
 /* The Modal (background) */
 .modal {
+    position:fixed;
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
     z-index: 999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
