@@ -24,8 +24,6 @@ function deleteErrors (){
      }
 
 
-
-
 function checkLogUser() {
     let loginValidator = new LoginValidator(userName.value, password.value);
     
@@ -34,7 +32,6 @@ function checkLogUser() {
     
     usersDB.forEach(user => {
         if ((user.name === userName.value) && (user.password === password.value)){
-            alert ('you are logged in!')
             localStorage.setItem('currentUser', JSON.stringify(user))
             window.location.href="./myprofile.html"
           }

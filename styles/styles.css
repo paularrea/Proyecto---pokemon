@@ -147,6 +147,18 @@ html body {
     display: block;
     margin:auto;
 }
+
+.faqs-goback{
+    margin:10px 200px;
+}
+.faqs-goback>a{
+    display:block;
+    margin:auto
+}
+.faqs-goback>h1{
+    display:block;
+    margin:auto
+}
 .login-btns{
     margin-top: 10%;
 }
@@ -207,7 +219,11 @@ form {
     font-size:20px;
     padding: 5px 20px;
 }
-/* media query for the game page */
+
+.faqs-answer{
+    font-size: 25px;
+}
+/* media query */
 @media (min-width: 730px) {
     
 
