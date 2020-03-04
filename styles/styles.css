@@ -201,10 +201,6 @@ form {
 .pokedex{
     margin:5%
 }
-.whosthatpokemon{
-    width: 50%;
-    filter: drop-shadow(100%);
-}
 .pikachu-gif{
     display:block;
     margin:auto;
@@ -227,6 +223,21 @@ form {
 .faqs-answer{
     font-size: 25px;
 }
+
+/* css game*/
+.silhouette {
+    filter: contrast(0%) brightness(20%);
+    opacity: 1;
+    transition: filter 0s;
+}
+
+.whosthatpokemon{
+    width: 50%;
+    filter: drop-shadow(100%);
+}
+
+
+
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
     color: #fff;
