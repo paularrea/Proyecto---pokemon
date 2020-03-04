@@ -4,7 +4,7 @@ let password = document.getElementById("password");
 let repeatPassword = document.getElementById("repeat-password");
 
 let logInButton = document.getElementById("log-in-button");
-let form = document.getElementsByClassName("signup-form")[0];
+let form = document.getElementsByClassName("login-form")[0];
 let formWrapper = document.getElementsByClassName("form-wrapper")[0];
 let loginButton = document.getElementsByClassName("login-button")[0];
 var currentUser
@@ -24,13 +24,31 @@ function deleteErrors (){
      }
 
 
-  function checkLogUser(){
-      usersDB.forEach(user => {
-        
-          if ((user.name === userName.value) && (user.password === password.value)){
-              alert ('you are logged in!')
-              localStorage.setItem('currentUser', JSON.stringify(user))
-              window.location.href="./myprofile.html"
-            }
+
+
+function checkLogUser() {
+    let loginValidator = new LoginValidator(userName.value, password.value);
+    
+    let usersDB = JSON.parse(localStorage.getItem("users"));
+    let logUser = true;
+    
+    usersDB.forEach(user => {
+        if ((user.name === userName.value) && (user.password === password.value)){
+            alert ('you are logged in!')
+            localStorage.setItem('currentUser', JSON.stringify(user))
+            window.location.href="./myprofile.html"
+          }
     })
+
+    if(loginValidator.checkUserName(usersDB)){
+        loginValidator.errorCreator(`Couldn't find you!, go to Sign-up!`, userName)
+        logUser=false
+    }
+    
+    if(loginValidator.checkPassword(usersDB)){
+        loginValidator.errorCreator("Please, introduce a valid password", password)
+        logUser=false
+    }
+     
+    return logUser
 }

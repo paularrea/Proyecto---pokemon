@@ -185,8 +185,8 @@ form {
 }
 .whosthatpokemon{
     width: 50%;
+    filter: drop-shadow(100%);
 }
-
 .pikachu-gif{
     display:block;
     margin:auto;
