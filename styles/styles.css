@@ -103,8 +103,6 @@ html body {
 }
 .white-part-pages-game{
     display:block;
-    height: 79%;
-    width: 100%;
     text-align: center;
     margin:10px;
 }
@@ -115,7 +113,6 @@ html body {
 .white-part-pages > button{
     display: block;
     margin:auto;
-
 }
 
 .white-part-pages > nav{
@@ -230,12 +227,17 @@ form {
     opacity: 1;
     transition: filter 0s;
 }
-
-.whosthatpokemon{
-    width: 50%;
-    filter: drop-shadow(100%);
+.whosthatpokemon>img{
+    width: 55%;
+}
+.cronoCountdown{
+    font-size: 40px;
 }
 
+#imgPokemonGame{
+    display: block;
+    margin: auto;
+}
 
 
 /* DEMO-SPECIFIC STYLES */
@@ -270,40 +272,14 @@ text-align: justify;
 
 
 
-  @keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @-webkit-keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-  @-webkit-keyframes blink {
-    50% {
-      border-color: tranparent;
-    }
-  }
+
+
+
+
+
+
+
+
 /* media query */
 @media (min-width: 730px) {
     
@@ -312,6 +288,7 @@ text-align: justify;
       display:block;
       margin:auto;
       font-size: 100px;
+      columns:2;
       
   }
   .whosthat-bs{
@@ -349,8 +326,17 @@ text-align: justify;
     .signup-goback-btn{
         margin: 70px 0;
     }
-    .whosthatpokemon{
+    .whosthatpokemon>img{
         width: 50%;
+    }
+    #time{
+        margin-top: -40px;
+    }
+    #imgPokemonGame{
+        margin-top: 50px;
+    }
+    .exit-btn{
+        margin-top:40px;
     }
   .countdown{
       font-size:50px;
@@ -361,13 +347,19 @@ text-align: justify;
     font-size: 35px;
     margin:30px;
     margin-top:40px;
+    
   }
   .pokemon-names{
       display:block;
       margin:auto;
   }
+
+  .white-part-pages-game{
+    margin-top: 100px;
+  }
   .index-menu > .nintendo-btn-dark{
-    font-size: 20px;
+    margin-top: 15px;
+    font-size: 40px;
 }
 
 /* The Modal (background) */
