@@ -123,8 +123,13 @@ html body {
     margin: 2% auto;
     padding: 0 40px;
     border: 2px solid #333333;
+    color:#333333;
     border-radius: 60px;
     background-color: white;
+}
+.nintendo-btn-dark:hover{
+    background-color: #333333;
+    color:  white;
 }
 
 .nintendo-btn-red{
@@ -135,6 +140,10 @@ html body {
     color:#FF3D00;
     border-radius: 60px;
     background-color: white;
+}
+.nintendo-btn-red:hover{
+    background-color: #FF3D00;
+    color:  white;
 }
 .play-goback{
     margin: 0 100px;
