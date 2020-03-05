@@ -2,7 +2,7 @@
 @font-face {font-family: "Nintendo DS BIOS"; src: url("//db.onlinewebfonts.com/t/1888b71aa651100801cb2e473433f5ec.eot"); src: url("//db.onlinewebfonts.com/t/1888b71aa651100801cb2e473433f5ec.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1888b71aa651100801cb2e473433f5ec.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1888b71aa651100801cb2e473433f5ec.woff") format("woff"), url("//db.onlinewebfonts.com/t/1888b71aa651100801cb2e473433f5ec.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1888b71aa651100801cb2e473433f5ec.svg#Nintendo DS BIOS") format("svg"); }
 
 *{
-    text-decoration:none;
+    text-decoration: none !important;
     font-family: "Nintendo DS BIOS";
 }
 
@@ -183,6 +183,9 @@ form {
     padding-top:2%;
     text-align: justify;
    
+}
+.error{
+    color: #FF3D00;
 }
 .form-control{
     margin-bottom: 15px;

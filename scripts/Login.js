@@ -43,7 +43,7 @@ function checkLogUser() {
     }
     
     if(loginValidator.checkPassword(usersDB)){
-        loginValidator.errorCreator("Please, introduce a valid password", password)
+        loginValidator.errorCreator("Incorrect password!", password)
         logUser=false
     }
      
