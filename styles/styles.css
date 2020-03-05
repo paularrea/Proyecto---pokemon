@@ -19,6 +19,7 @@ html body {
     height: 50vh;
     position:relative;  
 }
+
 .red-part h1{
     font-size: 50px;
     color:white;
@@ -254,6 +255,7 @@ form {
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
+    font-size:42px;
     color: #fff;
     overflow: hidden;
     border-right: .15em solid white;
@@ -263,6 +265,7 @@ form {
     animation: 
     typing 2.5s steps(30, end),
     blink-caret .5s step-end infinite;
+    
 }
 
 .typewriter{
