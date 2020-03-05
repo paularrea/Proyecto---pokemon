@@ -69,7 +69,7 @@ function showPokemon(randImg){
 
         let randId = randPokemon.url.split('/')[6];
 
-        let randPokeImg = `../img/${randId}.png`;
+        let randPokeImg = `./img/${randId}.png`;
         showPokemon(randPokeImg)
         const names = results.map(pokemon => pokemon.name);
         
