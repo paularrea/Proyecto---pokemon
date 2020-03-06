@@ -33,6 +33,7 @@ function checkLogUser() {
     usersDB.forEach(user => {
         if ((user.name === userName.value) && (user.password === password.value)){
             localStorage.setItem('currentUser', JSON.stringify(user))
+            localStorage.setItem('userScore', JSON.stringify(0))
             window.location.href="./myprofile.html"
           }
     })

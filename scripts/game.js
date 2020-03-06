@@ -2,6 +2,23 @@ let url = "https://pokeapi.co/api/v2/pokemon/";
 var pokemonImg = document.getElementById("imgPokemonGame")
 var textTop = document.getElementById("time");
 var downloadTimer;
+var score;
+
+const optionButton = document.getElementsByClassName('answer-option')
+
+function getResults() {
+    const answerOption = document.getElementById("myModal2")
+    console.log(localStorage.getItem('userScore'))
+    // const resultsGame = document.createElement("article");
+    answerOption.innerHTML = `<article><h2>RESULTS</h2>
+    <p>You reveled ${localStorage.getItem('userScore')} pokemon!</p> </article>
+    `;
+    
+    console.log(answerOption)
+    //answerOption.appendChild(resultsGame);
+    }
+
+
 //funcion de timer countdown
 function timer(){
     timeLeft = 10;
@@ -9,6 +26,7 @@ function timer(){
         if(timeLeft <= 0){
             clearInterval(downloadTimer);
             textTop.innerHTML = "You Lose!";
+            getResults();
         } else {
             document.getElementById("time").innerHTML = timeLeft;
         }
@@ -19,11 +37,8 @@ function timer(){
 
 //funcion para mostrar la imagen sin la classe ("silhouette")
 function showPokemon(randImg){
-
     let imagenPokemon = document.createElement('img')
-
     imagenPokemon.setAttribute('src',randImg)
-
     pokemonImg.appendChild(imagenPokemon);
 
 }
@@ -90,12 +105,21 @@ function showPokemon(randImg){
                 clearInterval(downloadTimer);
                 pokemonImg.classList.remove('silhouette')
                 textTop.innerHTML = "You Win!";
+                score = JSON.parse(localStorage.getItem('userScore'));
+                if (score){
+                    score++
+                    localStorage.setItem('userScore', JSON.stringify(score))
+                    console.log(score)
+                } else {
+                    localStorage.setItem('userScore', JSON.stringify(1))
+                }
                 setTimeout(function(){
                     location.reload();
                 }, 1500);
               } else {
                 clearInterval(downloadTimer);
                 textTop.innerHTML = "You lose!";
+                getResults();
               }
             })
         })
@@ -117,3 +141,38 @@ function showPokemon(randImg){
   }
 
   displayAnswers();
+
+
+
+
+
+  // Get the modal
+let modal = document.getElementById("myModal2");
+// Get the button that opens the modal
+let btn = document.querySelectorAll(".answer-option");
+// Get the <span> element that closes the modal
+let span = document.querySelectorAll(".close");
+let closeSpan = [...span];
+
+
+// When the user clicks the button, open the modal
+[...btn].forEach(item => {
+  item.addEventListener("click", event => {
+    modal.style.display = "block";
+  });
+});
+// When the user clicks on <span> (x), close the modal
+
+closeSpan.forEach(item => {
+  console.log(item);
+  item.addEventListener("click", event => {
+    modal.style.display = "none";
+  });
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
