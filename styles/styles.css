@@ -189,9 +189,9 @@ form {
 .error{
     color: #FF3D00;
 }
-.gamebtns{
-    columns:2;
-    margin:0 20px;
+.gamebtns a{
+    display: block;
+    margin:auto;
 }
 .form-control{
     margin-bottom: 15px;
