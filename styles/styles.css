@@ -16,7 +16,7 @@ html body {
   
 /*css landing-page*/
 .landing-page > div {
-    height: 50vh;
+ 
     position:relative;  
 }
 
@@ -25,12 +25,14 @@ html body {
     color:white;
     text-shadow: 2px 2px #FF3D00, 3px 3px white;
     display:flex;
+    margin-bottom: 60px !important;
     justify-content: center;
 }
 .red-part{
     background-color: #FF3D00;
     border-bottom: 5px solid #333333;
-    flex:1;
+    width: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,20 +63,20 @@ html body {
 .poke-logo{
     display:block;
     margin:auto;
+    margin-top: 50px;
     width: 90%;
 }
 .index-menu{
     display:block;
     margin:auto;
-    margin: 5% auto;
     border: none;
     background-color: white;
-    margin-top: 5%;
     text-decoration: none;
  
 }
 .white-part{
-    flex:1;
+    width: 100%;
+    height: 50%;
     display: flex;
     margin:auto;
     
@@ -122,11 +124,13 @@ html body {
 .nintendo-btn-dark{
     display:block;
     margin: 2% auto;
-    padding: 0 40px;
+    padding: 0 50px;
     border: 2px solid #333333;
     color:#333333;
-    border-radius: 60px;
+    border-radius: 50px;
     background-color: white;
+    
+    
 }
 .nintendo-btn-dark:hover{
     background-color: #333333;
@@ -136,7 +140,7 @@ html body {
 .nintendo-btn-red{
     display:block;
     margin: 2% auto;
-    padding: 0 40px;
+    padding: 0 50px;
     border: 2px solid #FF3D00;
     color:#FF3D00;
     border-radius: 60px;
@@ -169,7 +173,7 @@ html body {
     margin-top: 10%;
 }
 .index-btns{
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .indexbtn{
     margin-bottom: 10px;
@@ -249,7 +253,7 @@ form {
     width: 55%;
 }
 .cronoCountdown{
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #imgPokemonGame{
@@ -299,17 +303,109 @@ text-align: justify;
 
 
 
+@media screen 
+  and (min-width: 500px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .contenedorDesktop{
+width: 414px;
+border: 1px solid lightgray;
+border-radius: 10px;
+height: 736px;
+overflow-y: scroll;
+margin: 0 auto;
+box-shadow: 0 0 10px 2px rgba(0,0,0,.3);
+position: relative;
+margin-top: 50px;
+}
+.logoutLogo{
+position: absolute;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.nav-priv{
+  width: 410px;
+  margin: 0 auto;
+  border-radius: 15px;
+  top: 700px !important;
+  
+}
+.fondoApp{
+  position: absolute;
+}
+
+}
+
+
+
+@media screen 
+  and (min-width: 500px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .contenedorDesktop{
+width: 414px;
+border: 1px solid lightgray;
+border-radius: 10px;
+height: 736px;
+overflow-y: scroll;
+margin: 0 auto;
+box-shadow: 0 0 10px 2px rgba(0,0,0,.3);
+position: relative;
+margin-top: 50px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+    position:fixed;
+    display: none; /* Hidden by default */
+    z-index: 999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    width: 100%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+  cursor: pointer;
+  }
+
+  #myModal2 article{
+    margin-top:-70px;
+    height: 26%;
+
+}
+
+}
 
 
 
 
 
-
-
-
-
-
-/* media query */
+/* media query 
 @media (min-width: 730px) {
     
 
@@ -390,44 +486,5 @@ text-align: justify;
     margin-top: 15px;
     font-size: 40px;
 }
-
+*/
 /* The Modal (background) */
-.modal {
-    position:fixed;
-    display: none; /* Hidden by default */
-    z-index: 999; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    width: 100%; /* Full width */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 100%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-  cursor: pointer;
-  }
-
-  #myModal2 article{
-    margin-top:-70px;
-    height: 26%;
-
-}

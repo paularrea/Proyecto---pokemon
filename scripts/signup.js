@@ -35,7 +35,7 @@ function checkValidUser() {
         validUser=false
     }
     if(!signUpValidator.checkPassword()){
-        signUpValidator.errorCreator("Please, introduce a valid password", password)
+        signUpValidator.errorCreator("The password must have more than 6 characters", password)
         validUser=false
     }
     if(!signUpValidator.checkRepeatPassword()){
