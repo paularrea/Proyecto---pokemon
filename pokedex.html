@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokedex</title>
+
+    <link href="//db.onlinewebfonts.com/c/1888b71aa651100801cb2e473433f5ec?family=Nintendo+DS+BIOS" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="red-part-pages">
+        <div class="contenedor-pages">
+            <div><img class="poke-logo-pages" src="img/pokemon_logo.png"></div>
+        </div>
+    </div>
+    <div class="white-part-pages">
+        <div class="row play-goback">
+            <a href="game.html"><button type="button" class=" pokedexbtn nintendo-btn-red">PLAY</button></a>
+            <h1 class="retro-title">POKEDEX</h1>
+        <a href="myprofile.html"><button type="button" class="pokedexbtn nintendo-btn-dark">BACK</button></a>
+    </div>
+        <div id="pokemon-properties">
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="pokemon-properties modal">
+            <!-- Modal content -->
+            <span class="close">&times;</span>
+            <div id="div-info" class="modal-content">
+            </div>
+        </div>
+        
+        <table class="pokedex" class="table table-borderless">
+            <tbody>
+                <tr >
+                    <td><img id="1" class="pokemon-img" src="img/1.png"></td>
+                    <td><img id="2" class="pokemon-img" src="img/2.png"></td>
+                    <td><img id="3" class="pokemon-img" src="img/3.png"></td>
+                    <td><img id="4" class="pokemon-img" src="img/4.png"></td>
+                    <td><img id="5" class="pokemon-img" src="img/5.png"></td>
+                    <td><img id="6" class="pokemon-img" src="img/6.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="7" class="pokemon-img" src="img/7.png"></td>
+                    <td><img id="8" class="pokemon-img" src="img/8.png"></td>
+                    <td><img id="9" class="pokemon-img" src="img/9.png"></td>
+                    <td><img id="10" class="pokemon-img" src="img/10.png"></td>
+                    <td><img id="11" class="pokemon-img" src="img/11.png"></td>
+                    <td><img id="12" class="pokemon-img" src="img/12.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="13" class="pokemon-img" src="img/13.png"></td>
+                    <td><img id="14" class="pokemon-img" src="img/14.png"></td>
+                    <td><img id="15" class="pokemon-img" src="img/15.png"></td>
+                    <td><img id="16" class="pokemon-img" src="img/16.png"></td>
+                    <td><img id="17" class="pokemon-img" src="img/17.png"></td>
+                    <td><img id="18" class="pokemon-img" src="img/18.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="19" class="pokemon-img" src="img/19.png"></td>
+                    <td><img id="20" class="pokemon-img" src="img/20.png"></td>
+                    <td><img id="21" class="pokemon-img" src="img/21.png"></td>
+                    <td><img id="22" class="pokemon-img" src="img/22.png"></td>
+                    <td><img id="23" class="pokemon-img" src="img/23.png"></td>
+                    <td><img id="24" class="pokemon-img" src="img/24.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="25" class="pokemon-img" src="img/25.png"></td>
+                    <td><img id="26" class="pokemon-img" src="img/26.png"></td>
+                    <td><img id="27" class="pokemon-img" src="img/27.png"></td>
+                    <td><img id="28" class="pokemon-img" src="img/28.png"></td>
+                    <td><img id="29" class="pokemon-img" src="img/29.png"></td>
+                    <td><img id="30" class="pokemon-img" src="img/30.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="31" class="pokemon-img" src="img/31.png"></td>
+                    <td><img id="32" class="pokemon-img" src="img/32.png"></td>
+                    <td><img id="33" class="pokemon-img" src="img/33.png"></td>
+                    <td><img id="34" class="pokemon-img" src="img/34.png"></td>
+                    <td><img id="35" class="pokemon-img" src="img/35.png"></td>
+                    <td><img id="36" class="pokemon-img" src="img/36.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="37" class="pokemon-img" src="img/37.png"></td>
+                    <td><img id="38" class="pokemon-img" src="img/38.png"></td>
+                    <td><img id="39" class="pokemon-img" src="img/39.png"></td>
+                    <td><img id="40" class="pokemon-img" src="img/40.png"></td>
+                    <td><img id="41" class="pokemon-img" src="img/41.png"></td>
+                    <td><img id="42" class="pokemon-img" src="img/42.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="43" class="pokemon-img" src="img/43.png"></td>
+                    <td><img id="44" class="pokemon-img" src="img/44.png"></td>
+                    <td><img id="45" class="pokemon-img" src="img/45.png"></td>
+                    <td><img id="46" class="pokemon-img" src="img/46.png"></td>
+                    <td><img id="47" class="pokemon-img" src="img/47.png"></td>
+                    <td><img id="48" class="pokemon-img" src="img/48.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="49" class="pokemon-img" src="img/49.png"></td>
+                    <td><img id="50" class="pokemon-img" src="img/50.png"></td>
+                    <td><img id="51" class="pokemon-img" src="img/51.png"></td>
+                    <td><img id="52" class="pokemon-img" src="img/52.png"></td>
+                    <td><img id="53" class="pokemon-img" src="img/53.png"></td>
+                    <td><img id="54" class="pokemon-img" src="img/54.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="55" class="pokemon-img" src="img/55.png"></td>
+                    <td><img id="56" class="pokemon-img" src="img/56.png"></td>
+                    <td><img id="57" class="pokemon-img" src="img/57.png"></td>
+                    <td><img id="58" class="pokemon-img" src="img/58.png"></td>
+                    <td><img id="59" class="pokemon-img" src="img/59.png"></td>
+                    <td><img id="60" class="pokemon-img" src="img/60.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="61" class="pokemon-img" src="img/61.png"></td>
+                    <td><img id="62" class="pokemon-img" src="img/62.png"></td>
+                    <td><img id="63" class="pokemon-img" src="img/63.png"></td>
+                    <td><img id="64" class="pokemon-img" src="img/64.png"></td>
+                    <td><img id="65" class="pokemon-img" src="img/65.png"></td>
+                    <td><img id="66" class="pokemon-img" src="img/66.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="67" class="pokemon-img" src="img/67.png"></td>
+                    <td><img id="68" class="pokemon-img" src="img/68.png"></td>
+                    <td><img id="69" class="pokemon-img" src="img/69.png"></td>
+                    <td><img id="70" class="pokemon-img" src="img/70.png"></td>
+                    <td><img id="71" class="pokemon-img" src="img/71.png"></td>
+                    <td><img id="72" class="pokemon-img" src="img/72.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="73" class="pokemon-img" src="img/73.png"></td>
+                    <td><img id="74" class="pokemon-img" src="img/74.png"></td>
+                    <td><img id="75" class="pokemon-img" src="img/75.png"></td>
+                    <td><img id="76" class="pokemon-img" src="img/76.png"></td>
+                    <td><img id="77" class="pokemon-img" src="img/77.png"></td>
+                    <td><img id="78" class="pokemon-img" src="img/78.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="79" class="pokemon-img" src="img/79.png"></td>
+                    <td><img id="80" class="pokemon-img" src="img/80.png"></td>
+                    <td><img id="81" class="pokemon-img" src="img/81.png"></td>
+                    <td><img id="82" class="pokemon-img" src="img/82.png"></td>
+                    <td><img id="83" class="pokemon-img" src="img/83.png"></td>
+                    <td><img id="84" class="pokemon-img" src="img/84.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="85" class="pokemon-img" src="img/85.png"></td>
+                    <td><img id="86" class="pokemon-img" src="img/86.png"></td>
+                    <td><img id="87" class="pokemon-img" src="img/87.png"></td>
+                    <td><img id="88" class="pokemon-img" src="img/88.png"></td>
+                    <td><img id="89" class="pokemon-img" src="img/89.png"></td>
+                    <td><img id="90" class="pokemon-img" src="img/90.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="91" class="pokemon-img" src="img/91.png"></td>
+                    <td><img id="92" class="pokemon-img" src="img/92.png"></td>
+                    <td><img id="93" class="pokemon-img" src="img/93.png"></td>
+                    <td><img id="94" class="pokemon-img" src="img/94.png"></td>
+                    <td><img id="95" class="pokemon-img" src="img/95.png"></td>
+                    <td><img id="96" class="pokemon-img" src="img/96.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="97" class="pokemon-img" src="img/97.png"></td>
+                    <td><img id="98" class="pokemon-img" src="img/98.png"></td>
+                    <td><img id="99" class="pokemon-img" src="img/99.png"></td>
+                    <td><img id="100" class="pokemon-img" src="img/100.png"></td>
+                    <td><img id="101" class="pokemon-img" src="img/101.png"></td>
+                    <td><img id="102" class="pokemon-img" src="img/102.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="103" class="pokemon-img" src="img/103.png"></td>
+                    <td><img id="104" class="pokemon-img" src="img/104.png"></td>
+                    <td><img id="105" class="pokemon-img" src="img/105.png"></td>
+                    <td><img id="106" class="pokemon-img" src="img/106.png"></td>
+                    <td><img id="107" class="pokemon-img" src="img/107.png"></td>
+                    <td><img id="108" class="pokemon-img" src="img/108.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="109" class="pokemon-img" src="img/109.png"></td>
+                    <td><img id="110" class="pokemon-img" src="img/110.png"></td>
+                    <td><img id="111" class="pokemon-img" src="img/111.png"></td>
+                    <td><img id="112" class="pokemon-img" src="img/112.png"></td>
+                    <td><img id="113" class="pokemon-img" src="img/113.png"></td>
+                    <td><img id="114" class="pokemon-img" src="img/114.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="115" class="pokemon-img" src="img/115.png"></td>
+                    <td><img id="116" class="pokemon-img" src="img/116.png"></td>
+                    <td><img id="117" class="pokemon-img" src="img/117.png"></td>
+                    <td><img id="118" class="pokemon-img" src="img/118.png"></td>
+                    <td><img id="119" class="pokemon-img" src="img/119.png"></td>
+                    <td><img id="120" class="pokemon-img" src="img/120.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="121" class="pokemon-img" src="img/121.png"></td>
+                    <td><img id="122" class="pokemon-img" src="img/122.png"></td>
+                    <td><img id="123" class="pokemon-img" src="img/123.png"></td>
+                    <td><img id="124" class="pokemon-img" src="img/124.png"></td>
+                    <td><img id="125" class="pokemon-img" src="img/125.png"></td>
+                    <td><img id="126" class="pokemon-img" src="img/126.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="127" class="pokemon-img" src="img/127.png"></td>
+                    <td><img id="128" class="pokemon-img" src="img/128.png"></td>
+                    <td><img id="129" class="pokemon-img" src="img/129.png"></td>
+                    <td><img id="130" class="pokemon-img" src="img/130.png"></td>
+                    <td><img id="131" class="pokemon-img" src="img/131.png"></td>
+                    <td><img id="132" class="pokemon-img" src="img/132.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="133" class="pokemon-img" src="img/133.png"></td>
+                    <td><img id="134" class="pokemon-img" src="img/134.png"></td>
+                    <td><img id="135" class="pokemon-img" src="img/135.png"></td>
+                    <td><img id="136" class="pokemon-img" src="img/136.png"></td>
+                    <td><img id="137" class="pokemon-img" src="img/137.png"></td>
+                    <td><img id="138" class="pokemon-img" src="img/138.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="139" class="pokemon-img" src="img/139.png"></td>
+                    <td><img id="140" class="pokemon-img" src="img/140.png"></td>
+                    <td><img id="141" class="pokemon-img" src="img/141.png"></td>
+                    <td><img id="142" class="pokemon-img" src="img/142.png"></td>
+                    <td><img id="143" class="pokemon-img" src="img/143.png"></td>
+                    <td><img id="144" class="pokemon-img" src="img/144.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="145" class="pokemon-img" src="img/145.png"></td>
+                    <td><img id="146" class="pokemon-img" src="img/146.png"></td>
+                    <td><img id="147" class="pokemon-img" src="img/147.png"></td>
+                    <td><img id="148" class="pokemon-img" src="img/148.png"></td>
+                    <td><img id="149" class="pokemon-img" src="img/149.png"></td>
+                    <td><img id="150" class="pokemon-img" src="img/150.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="151" class="pokemon-img" src="img/151.png"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <script src="scripts/apiConnection.js"></script>
+</body>
+
+</html>
