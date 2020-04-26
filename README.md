@@ -16,7 +16,7 @@ Interactive game based on a regular feature of pokemon television episodes where
 - Retro styled webpage based on the classic 151 first pokemons.
 
 
-## Wireframes: 
+## Wireframes
 - Landing page
 - Game page
 - Pokedex (pokemon info)
